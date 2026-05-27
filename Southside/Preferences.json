@@ -1,0 +1,26 @@
+{
+  "Click GUI Keybind": {
+    "keyBinds": [
+      54
+    ]
+  },
+  "Enable Blur": true,
+  "Use custom GUI scale": false,
+  "Use custom Notification scale": false,
+  "Custom GUI scale": 1.0,
+  "Custom Notification scale": 1.0,
+  "Opening Behavior": 3,
+  "Show opening page animation": false,
+  "Time before reset": 15,
+  "Search Distance": 2,
+  "Opening Animation": true,
+  "Closing Animation": true,
+  "Opening Time": 0.6,
+  "Opening Type": 0,
+  "Show Page Animations": true,
+  "Page Animation Duration": 0.3,
+  "Toggle Switch Bounce": true,
+  "Tracker Response Time": 60,
+  "First Launch": false,
+  "Enabled": false
+}

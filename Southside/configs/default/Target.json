@@ -1,0 +1,16 @@
+{
+  "Player": true,
+  "Team": false,
+  "Team Mode": 0,
+  "Armor Slot": 0,
+  "Mob": false,
+  "Animal": false,
+  "Villager": false,
+  "Dead": false,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

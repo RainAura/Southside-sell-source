@@ -1,0 +1,16 @@
+{
+  "Min Range": 0,
+  "Max Range": 16,
+  "Rotation Count": 3,
+  "Auto Release": true,
+  "Release Count": 20,
+  "Predict": 2.0,
+  "Mark": true,
+  "RayCast": false,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

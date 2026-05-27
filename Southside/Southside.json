@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "version": "b13",
+    "create": "2024-06-07 02:27:14",
+    "modify": "2024-06-07 02:27:14"
+  },
+  "data": {
+    "config": "default",
+    "commandPrefix": "."
+  }
+}

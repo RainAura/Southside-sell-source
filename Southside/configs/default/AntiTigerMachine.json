@@ -1,0 +1,11 @@
+{
+  "Allow rolling time": 500,
+  "Disallow open other Tiger": true,
+  "This draws tigers on your screen": false,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

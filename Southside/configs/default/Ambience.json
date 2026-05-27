@@ -1,0 +1,14 @@
+{
+  "Weather": 0,
+  "Strength": 1,
+  "Override Time": false,
+  "Time": 12500,
+  "Thunder": false,
+  "Thunder Strength": 0.1,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

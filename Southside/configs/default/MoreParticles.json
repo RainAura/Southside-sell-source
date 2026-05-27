@@ -1,0 +1,10 @@
+{
+  "Critical Particles": true,
+  "Sharpness Particles": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

@@ -1,0 +1,12 @@
+{
+  "Debug": false,
+  "log": false,
+  "Persist": false,
+  "FlagVL": 10.0,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": true
+}

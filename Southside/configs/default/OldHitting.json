@@ -1,0 +1,15 @@
+{
+  "Translate X": 0,
+  "Translate Y": 0,
+  "Translate Z": 0,
+  "Swing Speed": 1.0,
+  "Item Scale": 1.0,
+  "Mode": 0,
+  "Give Shield": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": true
+}

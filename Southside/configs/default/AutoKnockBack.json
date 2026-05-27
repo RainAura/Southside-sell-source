@@ -1,0 +1,14 @@
+{
+  "Min Range": 10.0,
+  "Max Range": 16.0,
+  "Delay": 50.0,
+  "Predict": 0.6,
+  "AutoSwitch": true,
+  "Mark": true,
+  "Bind": {
+    "keyBinds": [
+      33
+    ]
+  },
+  "Enabled": false
+}

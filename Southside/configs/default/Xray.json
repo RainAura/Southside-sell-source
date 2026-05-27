@@ -1,0 +1,17 @@
+{
+  "World Opacity": 0.25,
+  "Cave Only": false,
+  "Range": 45,
+  "Outline": true,
+  "Line Width": 1,
+  "Outline Opacity": 0.25,
+  "Packet": false,
+  "Radius": 5,
+  "Delay": 3,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

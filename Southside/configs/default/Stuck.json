@@ -1,0 +1,10 @@
+{
+  "AutoDisable": false,
+  "Rotation First": true,
+  "Bind": {
+    "keyBinds": [
+      44
+    ]
+  },
+  "Enabled": false
+}

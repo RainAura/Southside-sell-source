@@ -1,0 +1,12 @@
+{
+  "Fall Distance": 3,
+  "Debug": false,
+  "Scaffold": true,
+  "Max Attempt Times": 1,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

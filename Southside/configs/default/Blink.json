@@ -1,0 +1,18 @@
+{
+  "Mode": 1,
+  "Smart Kill Aura": true,
+  "Smart Hit Count": 1,
+  "Slow Release": false,
+  "Ignore KeepAlive": false,
+  "Anti Aim": true,
+  "Arrow": true,
+  "Projectile": true,
+  "TNT": true,
+  "Player": true,
+  "Bind": {
+    "keyBinds": [
+      47
+    ]
+  },
+  "Enabled": false
+}

@@ -1,0 +1,11 @@
+{
+  "No Ground": false,
+  "No Armor": false,
+  "Living Time": false,
+  "Living Time Ticks": 0,
+  "No Sleeping": false,
+  "Bind": {
+    "keyBinds": []
+  },
+  "Enabled": false
+}

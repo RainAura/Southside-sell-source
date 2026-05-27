@@ -1,0 +1,40 @@
+{
+  "ArrayList": {
+    "No Render Modules": false,
+    "Background": true,
+    "Color": 1,
+    "Custom Color A": {
+      "hsba": [
+        0,
+        0,
+        100,
+        255
+      ],
+      "dataBit": -1
+    },
+    "Custom Color B": {
+      "hsba": [
+        0,
+        0,
+        100,
+        255
+      ],
+      "dataBit": -1
+    },
+    "Custom Speed": 10.0,
+    "Locked": false,
+    "HUD Position": {
+      "anchor": "2",
+      "x": 0.0,
+      "y": 0.0
+    },
+    "Scale": 1.5,
+    "Show in Chat": true,
+    "Show in F3 (Debug)": false,
+    "Show in GUIs": true
+  },
+  "Bind": {
+    "keyBinds": []
+  },
+  "Enabled": true
+}

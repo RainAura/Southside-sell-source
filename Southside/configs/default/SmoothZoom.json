@@ -1,0 +1,9 @@
+{
+  "Disable SmoothCamera": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

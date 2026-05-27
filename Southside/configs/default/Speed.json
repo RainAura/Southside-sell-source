@@ -1,0 +1,13 @@
+{
+  "Speed": 0.05,
+  "Follow Target": true,
+  "Only follow when jump": true,
+  "HurtTime Check": false,
+  "Adaptive": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

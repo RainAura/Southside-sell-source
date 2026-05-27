@@ -1,0 +1,11 @@
+{
+  "Mode": 1,
+  "Timer": 0.45,
+  "Auto Disable": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

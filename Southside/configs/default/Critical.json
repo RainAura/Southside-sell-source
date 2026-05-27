@@ -1,0 +1,10 @@
+{
+  "Mode": 0,
+  "Debug": false,
+  "Bypass HYT": true,
+  "Auto Block": true,
+  "Bind": {
+    "keyBinds": []
+  },
+  "Enabled": true
+}

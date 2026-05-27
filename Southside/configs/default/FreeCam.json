@@ -1,0 +1,11 @@
+{
+  "Slowdown Factor": 0.01,
+  "Acceleration": 50,
+  "Max Speed": 50,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

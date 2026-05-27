@@ -1,0 +1,11 @@
+{
+  "Delay": 250,
+  "Health": 1,
+  "Select Slot": 6,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

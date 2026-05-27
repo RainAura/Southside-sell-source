@@ -1,0 +1,11 @@
+{
+  "Min CPS": 6.0,
+  "Max CPS": 8.0,
+  "Left Click": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

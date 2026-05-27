@@ -1,0 +1,20 @@
+{
+  "Prefer Weapon HUD": {
+    "Locked": false,
+    "HUD Position": {
+      "anchor": "1",
+      "x": 0.0,
+      "y": 0.0
+    },
+    "Scale": 1.0,
+    "Show in Chat": true,
+    "Show in F3 (Debug)": false,
+    "Show in GUIs": true
+  },
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

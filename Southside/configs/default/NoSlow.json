@@ -1,0 +1,14 @@
+{
+  "Mode": 1,
+  "Sprint": true,
+  "Sword": true,
+  "Bow": false,
+  "Consume": true,
+  "RunEat": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": true
+}

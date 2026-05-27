@@ -1,0 +1,11 @@
+{
+  "Range": 4,
+  "FOV": 90,
+  "Speed": 2,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

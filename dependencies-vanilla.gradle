@@ -1,0 +1,27 @@
+dependencies {
+    implementation "io.netty:netty-all:${project.netty_version}"
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'javax.vecmath:vecmath:1.5.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+    implementation 'net.sf.jopt-simple:jopt-simple:5.0.4'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'com.github.oshi:oshi-core:6.4.7'
+    implementation 'com.github.oshi:oshi-core:3.5.0'
+    implementation fileTree(include: ['*.jar'], dir: './dependences/libs/sound/')
+    implementation platform("org.lwjgl:lwjgl-bom:${project.lwjgl_version}")
+    implementation "org.lwjgl:lwjgl"
+    implementation "org.lwjgl:lwjgl-stb"
+    implementation "org.lwjgl:lwjgl-glfw"
+    implementation "org.lwjgl:lwjgl-openal"
+    implementation "org.lwjgl:lwjgl-opengl"
+    implementation "org.lwjgl:lwjgl-nanovg"
+    implementation "org.lwjgl:lwjgl-tinyfd"
+    implementation "net.java.jinput:jinput-platform:2.0.7:$natives"
+    implementation "org.lwjgl:lwjgl::$natives"
+    implementation "org.lwjgl:lwjgl-stb::$natives"
+    implementation "org.lwjgl:lwjgl-glfw::$natives"
+    implementation "org.lwjgl:lwjgl-openal::$natives"
+    implementation "org.lwjgl:lwjgl-opengl::$natives"
+    implementation "org.lwjgl:lwjgl-nanovg::$natives"
+}

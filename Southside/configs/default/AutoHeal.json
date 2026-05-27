@@ -1,0 +1,14 @@
+{
+  "Delay": 1000,
+  "Health": 12,
+  "Head": true,
+  "Soup": true,
+  "Soup Regen Check": true,
+  "Throw Bowls": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

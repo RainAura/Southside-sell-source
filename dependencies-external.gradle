@@ -1,0 +1,18 @@
+dependencies {
+    libImpl 'net.jafama:jafama:2.3.2'
+    libImpl 'com.github.PasteIndustrial:eventbus:1.0.3'
+    implementation 'me.djtheredstoner:DevAuth-forge-legacy:1.2.0'
+    libImpl "net.lenni0451:Reflect:1.2.1"
+
+    implementation "com.viaversion:viaversion:${project.viaversion_version}"
+    implementation("com.viaversion:viabackwards-common:${project.viabackwards_version}") {
+        exclude group: "com.viaversion", module: "viaversion"
+        exclude group: "io.netty", module: "netty-all"
+    }
+    implementation "org.slf4j:slf4j-api:${project.slf4j_version}"
+    implementation "org.yaml:snakeyaml:${project.snake_yml_version}"
+    libImpl 'com.github.MrExplode:Blaze:2.1.1'
+    libImpl 'org.java-websocket:Java-WebSocket:1.5.4'
+//    libImpl 'net.java.dev.jna:jna:5.9.0'
+    implementation project(":license-emulator")
+}

@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+
+# Minecraft
+logs/
+saves/
+resourcepacks/
+shaderpacks/
+
+# Runtime
+run/
+crash-reports/
+usercache.json
+servers.dat
+options.txt
+optionsof.txt
+
+# Libraries
+libraries/
+dependencies/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

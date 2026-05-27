@@ -1,0 +1,23 @@
+{
+  "Mode": 0,
+  "First Delay": 150,
+  "Close Delay": 500,
+  "Min Delay": 0.0,
+  "Max Delay": 0.0,
+  "Aura": false,
+  "AuraRange": 4.5,
+  "AuraDelay": 100.0,
+  "Wait Open Delay": 2000.0,
+  "No Move": true,
+  "Title Check": true,
+  "Furnace": false,
+  "BrewingStand": true,
+  "Exploit": true,
+  "Only Useful Item": true,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

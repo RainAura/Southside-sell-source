@@ -1,0 +1,11 @@
+{
+  "Print Messages Beginning With \u0027!\u0027": true,
+  "Min Delay": 0,
+  "Max Delay": 0,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": true
+}

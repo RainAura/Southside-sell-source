@@ -1,0 +1,13 @@
+{
+  "Full Sprint": false,
+  "Keep fov": false,
+  "Switch Back": true,
+  "Fov": 1.2,
+  "Bed Wars": false,
+  "Bind": {
+    "keyBinds": [
+      34
+    ]
+  },
+  "Enabled": false
+}

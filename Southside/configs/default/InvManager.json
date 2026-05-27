@@ -1,0 +1,30 @@
+{
+  "Min Delay": 0.0,
+  "Max Delay": 0.0,
+  "Open Inventory": false,
+  "No Move": false,
+  "No Using": false,
+  "Start Delay": 54.0,
+  "Slot 1": 0,
+  "Slot 2": 1,
+  "Slot 3": 5,
+  "Slot 4": 4,
+  "Slot 5": 11,
+  "Slot 6": 10,
+  "Slot 7": 3,
+  "Slot 8": 2,
+  "Slot 9": 7,
+  "Keep Inferior Items": false,
+  "Wear Armors": true,
+  "Keep Debuff Potions": true,
+  "Keep Arrows": true,
+  "Keep Throwable": true,
+  "Keep Bed Wars Items": false,
+  "Keep Server Items": false,
+  "Bind": {
+    "keyBinds": [
+      19
+    ]
+  },
+  "Enabled": false
+}

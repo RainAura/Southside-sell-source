@@ -1,0 +1,215 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url = uri('https://maven.lenni0451.net/releases')
+        }
+    }
+    dependencies {
+        classpath 'com.guardsquare:proguard-gradle:7.4.2'
+        classpath 'com.github.johnrengelman:shadow:8.1.1'
+        classpath 'net.raphimc.java-downgrader:net.raphimc.java-downgrader.gradle.plugin:1.1.1'
+    }
+}
+
+plugins {
+    id "idea"
+    id "java"
+    id 'java-library'
+    id 'application'
+}
+
+import net.raphimc.javadowngrader.gradle.task.DowngradeJarTask
+
+group 'wtf.kiddo.southside '
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    maven { url = "https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1" }
+    maven { url "https://maven.lenni0451.net/releases" }
+//    maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+    maven { url 'https://jitpack.io' }
+    maven { url "https://repo.viaversion.com" }
+    mavenCentral()
+}
+
+import org.gradle.internal.os.OperatingSystem
+import proguard.gradle.ProGuardTask
+
+switch (OperatingSystem.current()) {
+    case OperatingSystem.LINUX:
+        project.ext.natives = "natives-linux"
+        break
+    case OperatingSystem.WINDOWS:
+        project.ext.natives = "natives-windows"
+        break
+}
+
+
+configurations {
+    libImpl
+}
+
+apply from: 'dependencies-external.gradle'
+apply from: 'dependencies-vanilla.gradle'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'dependences/libs')
+    configurations.libImpl.dependencies.each {
+        implementation(it)
+    }
+}
+
+run {
+    project.mkdir 'run'
+    mainClassName = 'Start'
+    jvmArgs = ['-Dfile.encoding=UTF-8', '-Ddevauth.enabled=true']
+    workingDir = 'run'
+}
+
+sourceSets {
+    main.java.srcDirs += './external-mods/main/java'
+    main.resources.srcDirs += './external-mods/main/resources'
+
+    main.java.srcDirs += './lwjgl3-compatibility-layer/src/main/java'
+    main.resources.srcDirs += './lwjgl3-compatibility-layer/src/main/resources'
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+}
+
+tasks.register('fatClient', Jar) {
+    with jar
+    from {
+        configurations.libImpl.collect {
+            if (it)
+                it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    exclude "Start.class"
+    archiveFileName.set('Southside-client.jar')
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+}
+
+tasks.register('fatDeps', Jar) {
+    from {
+        configurations.compileClasspath.collect {
+            if (it.path != null) {
+                println(it.name)
+                zipTree(it)
+            }
+        }
+    }
+    archiveFileName.set('Southside-deps.jar')
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+}
+
+tasks.register('package', Zip) {
+    dependsOn jar
+    from ('build/libs/') {
+        include 'Southside-1.0-SNAPSHOT.jar'
+        rename  'Southside-1.0-SNAPSHOT.jar', 'Southside.jar'
+        into 'Southside'
+    }
+    from ('package-files/') {
+        include 'Southside.json'
+        into 'Southside'
+    }
+    from ('package-files/') {
+        include 'README.txt'
+    }
+    archiveFileName.set('Southside.zip')
+}
+
+tasks.register("downgradeJar", DowngradeJarTask) {
+    input = tasks.jar.archiveFile.get().asFile
+    outputSuffix = "-downgrade"
+    compileClassPath = sourceSets.main.compileClasspath
+}.get().dependsOn("build")
+
+tasks.register('downgradePackage', Zip) {
+    dependsOn downgradeJar
+    from ('build/libs/') {
+        include 'Southside-1.0-SNAPSHOT-downgrade.jar'
+        rename  'Southside-1.0-SNAPSHOT-downgrade.jar', 'Southside.jar'
+        into 'Southside'
+    }
+    from ('package-files/') {
+        include 'Southside.json'
+        into 'Southside'
+    }
+    from ('package-files/') {
+        include 'README.txt'
+    }
+    archiveFileName.set('Southside.zip')
+}
+
+/*
+idea {
+    project {
+        settings {
+            runConfigurations {
+                "MinecraftClient"(Application) {
+                    moduleName = 'MinecraftClient'
+                    moduleName = project.name + '.main'
+                    mainClass = 'Start'
+                    workingDirectory = "${project.projectDir}${File.separator}run"
+                    jvmArgs = "-Djava.library.path=\"${project.projectDir}${File.separator}dependences${File.separator}natives\""
+                }
+            }
+        }
+    }
+    module {
+        inheritOutputDirs = false
+        outputDir = file('build')
+        testOutputDir = file('build')
+    }
+}
+ */
+
+compileJava.options.encoding = "UTF-8"
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+project.mkdir "${project.projectDir}/run"
+
+task copyDeps(type: Copy) {
+    from configurations.compileClasspath
+    into 'libs'
+}
+
+tasks.register('fatClientWithPreObfuscate', ProGuardTask) {dependsOn fatClient
+    verbose
+    injars "$buildDir/libs/Southside-client.jar"
+    outjars "$buildDir/libs/PreObf-Southside-client.jar"
+
+    // Automatically handle the Java version of this build.
+    if (System.getProperty('java.version').startsWith('1.')) {
+        // Before Java 9, the runtime classes were packaged in a single jar file.
+        libraryjars "${System.getProperty('java.home')}/lib/rt.jar"
+    } else {
+        // As of Java 9, the runtime classes are packaged in modular jmod files.
+        libraryjars "${System.getProperty('java.home')}/jmods/java.base.jmod", jarfilter: '!**.jar', filter: '!module-info.class'
+        libraryjars "${System.getProperty('java.home')}/jmods/java.sql.jmod", jarfilter: '!**.jar', filter: '!module-info.class'
+        //libraryjars "${System.getProperty('java.home')}/jmods/....."
+    }
+    configurations.compileClasspath.collect {
+        if (it.path != null) {
+            libraryjars (it.path)
+        }
+    }
+    printmapping 'proguard.map'
+    dontwarn '**.**'
+    keepattributes "*Annotation*"
+    keepattributes "SourceFile,LineNumberTable"
+    keepattributes "RuntimeVisibleAnnotations,RuntimeVisibleParameterAnnotations,RuntimeVisibleTypeAnnotations"
+    repackageclasses "SubClasses"
+    keep "class net.minecraft.** { *; }"
+    keep "class dev.diona.** { *; }"
+    keep "class me.bush.eventbus.** { *; }"
+    keep "class me.kbrewster.eventbus.** { *; }"
+    keepclassmembers "class * extends java.lang.Enum { <fields>; *; }"
+    dontshrink
+    dontoptimize
+    dontusemixedcaseclassnames
+}

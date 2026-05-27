@@ -1,0 +1,20 @@
+{
+  "Players": true,
+  "Animals": true,
+  "Mobs": false,
+  "Invisible": false,
+  "Passives": true,
+  "Dropped Items": false,
+  "Health Bar": true,
+  "Tags": true,
+  "Filled": true,
+  "Box": true,
+  "BoxMode": 0,
+  "Thickness": 1.5,
+  "Bind": {
+    "keyBinds": [
+      0
+    ]
+  },
+  "Enabled": false
+}

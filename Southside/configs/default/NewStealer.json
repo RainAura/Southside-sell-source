@@ -1,0 +1,13 @@
+{
+  "First Delay": 70.0,
+  "Delay": 0,
+  "Close Delay": 100.0,
+  "Aura": false,
+  "AuraDelay": 100.0,
+  "Bind": {
+    "keyBinds": [
+      19
+    ]
+  },
+  "Enabled": false
+}
